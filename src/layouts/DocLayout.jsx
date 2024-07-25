@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-const LabLayout = () => {
+const DocLayout = () => {
   return (
     <div>
       <Outlet />
@@ -8,4 +8,4 @@ const LabLayout = () => {
   );
 };
 
-export default LabLayout;
+export default DocLayout;
