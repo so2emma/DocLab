@@ -9,6 +9,8 @@ import DocLayout from "./layouts/DocLayout";
 import LabLayout from "./layouts/LabLayout";
 import RootLayout from "./layouts/RootLayout";
 import HomePage from "./pages/HomePage";
+import DocLoginPage from "./pages/doc/DocLoginPage";
+import DocRegisterPage from "./pages/doc/DocRegisterPage";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -17,8 +19,9 @@ const App = () => {
         <Route index element={<HomePage />} />
 
         {/* this is the layout for doctors */}
-        <Route path="doc" element={<DocLayout />}>
-
+        <Route path="/doc" element={<DocLayout />}>
+          <Route path="login" element={<DocLoginPage />} />
+          <Route path="register" element={<DocRegisterPage />} />
         </Route>
 
         {/* This is the layout for routes  */}
